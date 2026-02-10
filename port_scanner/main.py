@@ -40,7 +40,11 @@ def scan_port(target, port, timeout=1.0):
         # TODO: Close the socket
         # TODO: Return True if connection successful
 
-        pass  # Remove this and implement
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(timeout)
+        s.connect((target, port))
+        s.close()
+        return True
 
     except (socket.timeout, ConnectionRefusedError, OSError):
         return False
@@ -71,11 +75,87 @@ def scan_range(target, start_port, end_port):
         # TODO: Scan this port
         # TODO: If open, add to open_ports list
         # TODO: Print progress (optional)
-        pass  # Remove this and implement
+        if scan_port(target, port):
+            if port not in open_ports:
+                open_ports.append(port)
+
+                banner = grab_banner(target, port, timeout=1.0)
+                service = guess_service(port, banner)
+
+                first_line = banner.splitlines()[0] if banner else ""
+                if first_line:
+                    print(f"[+] Port {port}: open | {service} | {first_line}")
+                else:
+                    print(f"[+] Port {port}: open | {service}")
 
     return open_ports
 
+def grab_banner(target, port, timeout=1.0):
+    s = None
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(timeout)
+        s.connect((target, port))
 
+        try:
+            data = s.recv(1024)
+            if data:
+                return data.decode(errors="replace").strip()
+        except socket.timeout:
+            pass
+
+        http_probe = f"HEAD / HTTP/1.0\r\nHost: {target}\r\n\r\n".encode()
+        try:
+            s.sendall(http_probe)
+            data = s.recv(2048)
+            if data:
+                return data.decode(errors="replace").strip()
+        except Exception:
+            pass
+
+        try:
+            s.sendall(b"PING\r\n")
+            data = s.recv(1024)
+            if data:
+                return data.decode(errors="replace").strip()
+        except Exception:
+            pass
+
+        return ""
+
+    except Exception:
+        return ""
+    finally:
+        if s is not None:
+            try:
+                s.close()
+            except Exception:
+                pass
+
+
+def guess_service(port, banner):
+   
+    b = (banner or "").lower()
+
+    if "ssh" in b:
+        return "SSH"
+    if "http/" in b or "server:" in b:
+        return "HTTP"
+    if "mysql" in b:
+        return "MySQL"
+    if "redis" in b or "+pong" in b:
+        return "Redis"
+    if port in (80, 443, 5000, 5001, 8888):
+        return "HTTP."
+    if port in (22, 2222):
+        return "SSH."
+    if port == 3306:
+        return "MySQL."
+    if port == 6379:
+        return "Redis."
+
+    return "Unknown"
+    
 def main():
     """Main function"""
     # TODO: Parse command-line arguments
@@ -90,8 +170,18 @@ def main():
         sys.exit(1)
 
     target = sys.argv[1]
-    start_port = 1
-    end_port = 1024  # Scan first 1024 ports by default
+    # start_port = 1
+    # end_port = 1024  # Scan first 1024 ports by default
+    try:
+        start_port = int(sys.argv[2])
+        end_port = int(sys.argv[3])
+    except ValueError:
+        print("Error: start_port and end_port need to be integers")
+        sys.exit(1)
+
+    if not (1 <= start_port <= 65535 and 1 <= end_port <= 65535 and start_port <= end_port):
+        print("Error: ports need to be between 1 and 65535, and start_port <= end_port.")
+        sys.exit(1)
 
     print(f"[*] Starting port scan on {target}")
 

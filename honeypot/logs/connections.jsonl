@@ -1,3 +1,51 @@
 {"timestamp": "2026-01-05T15:47:39.322396", "event": "connection", "client_ip": "172.20.0.1", "client_port": 40642}
 {"timestamp": "2026-01-05T15:47:47.059106", "event": "connection", "client_ip": "172.20.0.1", "client_port": 39300}
 {"timestamp": "2026-01-05T15:58:47.101147", "event": "connection", "client_ip": "172.20.0.1", "client_port": 58506}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 58604, "timestamp": "2026-02-10T01:48:41.282348+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 58614, "timestamp": "2026-02-10T01:48:41.283381+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 58604, "username": "GET / HTTP/1.1", "password": "Host: localhost:2222", "timestamp": "2026-02-10T01:48:41.284432+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 58604, "duration_s": 0.503, "timestamp": "2026-02-10T01:48:41.785939+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 58614, "username": "GET / HTTP/1.1", "password": "Host: localhost:2222", "timestamp": "2026-02-10T01:48:42.313801+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 58618, "timestamp": "2026-02-10T01:48:42.321707+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 58630, "timestamp": "2026-02-10T01:48:42.323157+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 58614, "duration_s": 1.531, "timestamp": "2026-02-10T01:48:42.814750+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 46218, "timestamp": "2026-02-10T01:48:49.490646+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 46218, "username": "SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.13", "password": "\u0000\u0000\u0005\ufffd\u0007\u0014u\ufffd\ufffd<\ufffdA\ufffd\u001e\ufffd0\ufffd\u0013\u0018\ufffd\u0010.\u0000\u0000\u00011sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-s", "timestamp": "2026-02-10T01:48:49.493032+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 46218, "duration_s": 0.503, "timestamp": "2026-02-10T01:48:49.994391+00:00"}
+{"event": "error", "client_ip": "172.20.0.1", "client_port": 58630, "message": "timed out", "timestamp": "2026-02-10T01:48:52.335187+00:00"}
+{"event": "error", "client_ip": "172.20.0.1", "client_port": 58618, "message": "timed out", "timestamp": "2026-02-10T01:48:52.334890+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 58630, "duration_s": 10.013, "timestamp": "2026-02-10T01:48:52.336157+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 58618, "duration_s": 10.014, "timestamp": "2026-02-10T01:48:52.336454+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 35338, "timestamp": "2026-02-10T02:03:03.482116+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 35338, "username": "admin", "password": "123", "timestamp": "2026-02-10T02:03:09.606994+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 35338, "duration_s": 6.626, "timestamp": "2026-02-10T02:03:10.107857+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 45740, "timestamp": "2026-02-10T02:03:24.844581+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 45740, "username": "admin", "password": "letmein123", "timestamp": "2026-02-10T02:03:29.751892+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 45740, "duration_s": 5.408, "timestamp": "2026-02-10T02:03:30.252897+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 51462, "timestamp": "2026-02-10T02:03:59.253301+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 51462, "username": "sshuser", "password": "SecurePass2024!", "timestamp": "2026-02-10T02:04:11.167825+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 51462, "duration_s": 12.415, "timestamp": "2026-02-10T02:04:11.668798+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 56018, "timestamp": "2026-02-10T02:06:49.900118+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 56018, "username": "123", "password": "123", "timestamp": "2026-02-10T02:06:55.032005+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 56018, "duration_s": 5.633, "timestamp": "2026-02-10T02:06:55.532998+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 43414, "timestamp": "2026-02-10T02:14:15.810210+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 43414, "username": "tesstttt", "password": "testttttt", "timestamp": "2026-02-10T02:14:25.632111+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 43414, "duration_s": 10.323, "timestamp": "2026-02-10T02:14:26.133052+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 56752, "timestamp": "2026-02-10T02:15:12.234370+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 56752, "username": "testingringri", "password": "togiktrengoierngoie", "timestamp": "2026-02-10T02:15:17.023263+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 56752, "duration_s": 5.29, "timestamp": "2026-02-10T02:15:17.524169+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 59334, "timestamp": "2026-02-10T02:15:20.515283+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 59334, "username": "gihbheriugbneriugneiu", "password": "gfwregerg", "timestamp": "2026-02-10T02:15:26.464823+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 59334, "duration_s": 6.45, "timestamp": "2026-02-10T02:15:26.965569+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 44338, "timestamp": "2026-02-10T02:15:30.689016+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 44338, "username": "", "password": "", "timestamp": "2026-02-10T02:15:34.534954+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 44338, "duration_s": 4.347, "timestamp": "2026-02-10T02:15:35.036012+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 42836, "timestamp": "2026-02-10T02:15:37.349133+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 42836, "username": "", "password": "", "timestamp": "2026-02-10T02:15:37.832017+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 42836, "duration_s": 0.984, "timestamp": "2026-02-10T02:15:38.333579+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 42842, "timestamp": "2026-02-10T02:15:40.577389+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 42842, "username": "", "password": "loginn blank", "timestamp": "2026-02-10T02:15:44.902645+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 42842, "duration_s": 4.826, "timestamp": "2026-02-10T02:15:45.403682+00:00"}
+{"event": "connection", "client_ip": "172.20.0.1", "client_port": 36766, "timestamp": "2026-02-10T02:57:31.044177+00:00"}
+{"event": "auth_attempt", "client_ip": "172.20.0.1", "client_port": 36766, "username": "hiue", "password": "fuwneh", "timestamp": "2026-02-10T02:57:41.681812+00:00"}
+{"event": "disconnect", "client_ip": "172.20.0.1", "client_port": 36766, "duration_s": 11.143, "timestamp": "2026-02-10T02:57:42.183212+00:00"}
